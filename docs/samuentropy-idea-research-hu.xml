@@ -385,6 +385,7 @@
                         </section>
                         <section>
                             <title>Gréta</title>
+                            <para>Android bevezető feladatként kezdjük az alábbi egymásra épülő apró esettanulmányokkal.</para>
                             <orderedlist numeration="lowerroman">
                                 <listitem>
                                     <para>
@@ -502,22 +503,143 @@
                                 <listitem>
                                     <para>
                                         <indexterm>
-                                            <primary>Brainboard</primary>
+                                            <primary>NorbironBoard</primary>
                                         </indexterm>
-                                        Készíts egy saját forkot a Brainboard app-ból (az egész ESAMU-ról persze) és 
-                                        a saját magad elképzelte irányban fejleszd tovább, azaz kísérletezz a játékélménnyel!
-                                        (UDPROG közösségben 490 pont, a játékélményt írd meg fészes posztban is, 
-                                        a posztodra minden szakmai komment +10 pont, minden lájk 5 pont).
+                                        Készíts egy saját forkot a 
+                                        <filename class="directory">../cs/NorbironBoard</filename> app-ból 
+                                        (az egész ESAMU-ról persze) és gondold át a processzorok kijelölését, majd valósíts meg
+                                        ennek kapcsán valamilyen saját elképzelésedet!
+                                        (UDPROG közösségben, tipikusan kezdőknek ajánlva: 420 pont).
                                     </para>
-                                    <tip>
-                                        <title>Alaplap szerkesztő</title> 
-                                        <para>
-                                            A Brainboard app-okban az intuitív cél egyfajta &#x201E;neurális alaplap&#x201D; szerkesztőnek mint
-                                            játéknak a kialakítása.
-                                        </para>
-                                    </tip>                                    
-                                </listitem>
+                                </listitem>                                
+                                <listitem>
+                                    <para>
+                                        <indexterm>
+                                            <primary>NorbironBoard</primary>
+                                        </indexterm>
+                                        Készíts egy saját forkot a 
+                                        <filename class="directory">../cs/NorbironBoard</filename> app-ból 
+                                        (az egész ESAMU-ról persze) és javíts a mozgatáson és nagyításon (tehát legyen elképzelés mit
+                                        javítanál és valósítsd is meg)!
+                                        (UDPROG közösségben, tipikusan kezdőknek ajánlva: 380 pont).
+                                    </para>
+                                </listitem>                                
+                                <listitem>
+                                    <para>
+                                        <indexterm>
+                                            <primary>NorbironBoard</primary>
+                                        </indexterm>
+                                        Készíts egy saját forkot a 
+                                        <filename class="directory">../cs/NorbironBoard</filename> app-ból 
+                                        és old meg, hogy a neuron sprite-ok ne másszanak ki a procik alól!
+                                        (UDPROG közösségben, tipikusan kezdőknek ajánlva: 210 pont).
+                                    </para>
+                                </listitem>                                                                
+                                <listitem>
+                                    <para>
+                                        <indexterm>
+                                            <primary>NorbironBoard</primary>
+                                        </indexterm>
+                                        Készíts egy saját forkot a 
+                                        <filename class="directory">../cs/NorbironBoard</filename> app-ból 
+                                        és old meg, hogy a készülék forgatásakor ua. maradjon az elemek elhelyezkedése!
+                                        (UDPROG közösségben, tipikusan kezdőknek ajánlva: 310 pont).
+                                    </para>
+                                </listitem>                                                                
                             </orderedlist>
+                            <para>A bevezető Androidos feladatokat zárjuk az előző csokor első és utolsó aktivitiének
+                                összekapcsolásával, ez a NorbironSplash
+                                <indexterm>
+                                    <primary>NorbironSplash</primary>
+                                </indexterm>
+                                Készíts egy saját forkot a 
+                                <filename class="directory">../cs/NorbironSplash</filename> app-ból 
+                                és eszközölj benne valamilyen tetszőleges módosítást!
+                                (UDPROG közösségben, tipikusan kezdőknek ajánlva: 80 pont, ennek a hegylakó változata
+                                a határidőre, versenyben, from scratch 500 pont volt).
+                            </para>                                                        
+                            <section>
+                                <title>Az 5. védés</title>                            
+                                <para>
+                                    Az előző pont oktatásban bevezető (kutatásban a potenciális játékélményeket feltáró) példái
+                                    után itt azok következnek, amelyek védhetőek a reguláris képzés UDPROG közösségében. A három 
+                                    feladat erősorrendben követi egymást, ezt is érdemes megfontolni a választásnál.                                    
+                                </para>
+                                <orderedlist>                                    
+                                    <listitem>
+                                        <para>
+                                            <indexterm>
+                                                <primary>NorbironTable</primary>
+                                            </indexterm>
+                                            Készíts egy saját forkot a <filename class="directory">../cs/NorbironTable</filename>
+                                            app-ból (az egész ESAMU-ról persze) és 
+                                            a saját magad elképzelte irányban fejleszd tovább, azaz kísérletezz a játékélménnyel!
+                                            Védésként választva kötelező implemntálandó pontok az alábbiak:
+                                            <itemizedlist>                                    
+                                                <listitem>
+                                                    <para>
+                                                        Találj ki valamilyen politikát a nódokat hozzáadó aktiviti elérésére és valósítsd meg 
+                                                        (pl. a Build csomópont legyen mindig a bal alsó sarokban, akár legyen külön menü stb. most
+                                                        ugye a Build csomóponton kettőt kattintva jön be).
+                                                    </para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para>Az app emlékezzen a felépített nódokra, azaz újraindítás után a korábban 
+                                                        felrakott csomópontok jelenjenek meg.                                            
+                                                    </para>
+                                                </listitem>
+                                            </itemizedlist>   
+                                            ezeket készítheted from scratch, vagy akár 2 fős csoportban, a kezdők a további protók
+                                            alapján, azokra pár napot várva, hogy a from scratch értelmezhető legyen.
+                                            (UDPROG közösségben 490 pont, a játékélményt írd meg fészes posztban is, 
+                                            a posztodra minden szakmai komment +10 pont, minden lájk 5 pont).
+                                        </para>
+                                    </listitem>                                
+                                    <listitem>
+                                        <para>
+                                            <indexterm>
+                                                <primary>Brainboard</primary>
+                                            </indexterm>
+                                            Készíts egy saját forkot a <filename class="directory">../cs/Brainboard</filename> app-ból (az egész ESAMU-ról persze) és 
+                                            a saját magad elképzelte irányban fejleszd tovább, azaz kísérletezz a játékélménnyel!
+                                            Védésként választva kötelező implemntálandó pontok az alábbiak:
+                                            <itemizedlist>                                    
+                                                <listitem>
+                                                    <para>
+                                                        Tudjon mindent, amit a NorbironTable feladott védési feladatként!
+                                                    </para>
+                                                </listitem>
+                                                <listitem>
+                                                    <para>Az aktuális csomópontokat a <guibutton>BOXIN</guibutton>
+                                                    gomb nyomására tegye egy új dobozba, ami
+                                                    jelenjen meg a <guibutton>BUILD</guibutton> alatt is!                                            
+                                                    </para>
+                                                </listitem>
+                                            </itemizedlist>                                               
+                                            (UDPROG közösségben 790 pont, a játékélményt írd meg fészes posztban is, 
+                                            a posztodra minden szakmai komment +10 pont, minden lájk 5 pont).                                            
+                                        </para>
+                                        <tip>
+                                            <title>Alaplap szerkesztő</title> 
+                                            <para>
+                                                A Brainboard app-okban az intuitív cél egyfajta &#x201E;neurális alaplap&#x201D; szerkesztőnek mint
+                                                játéknak a kialakítása.
+                                            </para>
+                                        </tip>                                    
+                                    </listitem>                                
+                                    <listitem>
+                                        <para>
+                                            <indexterm>
+                                                <primary>GretaTheBuilder</primary>
+                                            </indexterm>
+                                            Készíts egy saját forkot a GretaTheBuilder app-ból (az egész ESAMU-ról persze) és 
+                                            a saját magad elképzelte irányban fejleszd tovább, azaz kísérletezz a játékélménnyel!
+                                            (UDPROG közösségben 690 pont, a játékélményt írd meg fészes posztban is, 
+                                            a posztodra minden szakmai komment +10 pont, minden lájk 5 pont).
+                                        </para>
+                                    </listitem>                                
+                                </orderedlist>                            
+                            </section>
                         </section>
                         <section>
                             <title>Nándi</title>
