@@ -4,7 +4,7 @@
  * Norbiron Board
  * This is a case study for creating sprites for SamuEntropy/Brainboard.
  *
- * Copyright (C) 2016, Dr. B√°tfai Norbert
+ * Copyright (C) 2016, Dr. B·tfai Norbert
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,31 +19,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Ez a program szabad szoftver; terjeszthet≈ë illetve m√≥dos√≠that√≥ a
- * Free Software Foundation √°ltal kiadott GNU General Public License
- * dokumentum√°ban le√≠rtak; ak√°r a licenc 3-as, ak√°r (tetsz≈ëleges) k√©s≈ëbbi
- * v√°ltozata szerint.
+ * Ez a program szabad szoftver; terjeszthetı illetve mÛdosÌthatÛ a
+ * Free Software Foundation ·ltal kiadott GNU General Public License
+ * dokumentum·ban leÌrtak; ak·r a licenc 3-as, ak·r (tetszıleges) kÈsıbbi
+ * v·ltozata szerint.
  *
- * Ez a program abban a rem√©nyben ker√ºl k√∂zread√°sra, hogy hasznos lesz,
- * de minden egy√©b GARANCIA N√âLK√úL, az ELADHAT√ìS√ÅGRA vagy VALAMELY C√âLRA
- * VAL√ì ALKALMAZHAT√ìS√ÅGRA val√≥ sz√°rmaztatott garanci√°t is bele√©rtve.
- * Tov√°bbi r√©szleteket a GNU General Public License tartalmaz.
+ * Ez a program abban a remÈnyben ker¸l kˆzread·sra, hogy hasznos lesz,
+ * de minden egyÈb GARANCIA N…LK‹L, az ELADHAT”S¡GRA vagy VALAMELY C…LRA
+ * VAL” ALKALMAZHAT”S¡GRA valÛ sz·rmaztatott garanci·t is beleÈrtve.
+ * Tov·bbi rÈszleteket a GNU General Public License tartalmaz.
  *
- * A felhaszn√°l√≥nak a programmal egy√ºtt meg kell kapnia a GNU General
- * Public License egy p√©ld√°ny√°t; ha m√©gsem kapta meg, akkor
+ * A felhaszn·lÛnak a programmal egy¸tt meg kell kapnia a GNU General
+ * Public License egy pÈld·ny·t; ha mÈgsem kapta meg, akkor
  * tekintse meg a <http://www.gnu.org/licenses/> oldalon.
  *
  * Version history:
  *
  * 0.0.1, 6 Oct 16.
  */
+
 package batfai.samuentropy.brainboard7;
 
 /**
  *
  * @author nbatfai
  */
-public class NeuronBox implements Cloneable {
+public class NeuronBox implements Cloneable
+{
 
     private Sprite[] neurons;
 
@@ -52,12 +54,13 @@ public class NeuronBox implements Cloneable {
     android.graphics.Rect to;
     private int boxWidth;
     private int boxHeight;
-    private int x;
-    private int y;
-    int numberOfNeurons;
+    public int x;
+    public int y;
+    public int numberOfNeurons;
     protected static android.graphics.Paint boxPaint = new android.graphics.Paint();
     protected static android.graphics.Paint selectedBoxPaint = new android.graphics.Paint();
     protected int selectedBoxPaintSize = 0;
+    public int covertype;
 
     protected boolean open = false;
     protected boolean selected = false;
@@ -66,7 +69,7 @@ public class NeuronBox implements Cloneable {
 
     public NeuronBox(android.graphics.Bitmap tiles, int length, int width, int height,
             int numberOfNeurons,
-            android.graphics.Bitmap cover, int x, int y) {
+            android.graphics.Bitmap cover, int x, int y, int covertype) {
         this.x = x;
         this.y = y;
         this.tiles = tiles;
@@ -74,6 +77,7 @@ public class NeuronBox implements Cloneable {
         this.cover = cover;
         this.boxWidth = cover.getWidth();
         this.boxHeight = cover.getHeight();
+        this.covertype = covertype;
 
         to = new android.graphics.Rect(0, 0, boxWidth, boxHeight);
 
@@ -133,7 +137,8 @@ public class NeuronBox implements Cloneable {
         return open;
     }
 
-    public int getWidth() {
+    public int getWidth()
+    {
         return boxWidth;
     }
 
@@ -191,5 +196,4 @@ public class NeuronBox implements Cloneable {
         }
 
     }
-
 }

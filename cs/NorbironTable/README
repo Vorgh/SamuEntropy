@@ -1,4 +1,4 @@
-# Norbiron Game Engine/Table
+﻿# Norbiron Game Engine/Table
 
 ## Norbiron, animation of a neuron
 
@@ -24,4 +24,4 @@ $ android avd
 Progi feltöltése az emulátorba (feltéve, hogy a pom.xml-el egy szinten állunk, telefonra
 ugyanezm ha USB debug engedélyezve devel módban és rádugva a telcsi)
 
-$ adb install -r target/NeuronSplash.apk 
+$ adb install -r target/NeuronTable.apk 

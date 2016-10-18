@@ -2,9 +2,9 @@
  * ScaleAdapter.java
  *
  * Norbiron Game
- * This is a case study for creating sprites for SamuEntropy/Brainboard.
+  * This is a case study for creating sprites for SamuEntropy/Brainboard.
  *
- * Copyright (C) 2016, Dr. B√°tfai Norbert
+ * Copyright (C) 2016, Dr. B·tfai Norbert
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,18 +19,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Ez a program szabad szoftver; terjeszthet≈ë illetve m√≥dos√≠that√≥ a
- * Free Software Foundation √°ltal kiadott GNU General Public License
- * dokumentum√°ban le√≠rtak; ak√°r a licenc 3-as, ak√°r (tetsz≈ëleges) k√©s≈ëbbi
- * v√°ltozata szerint.
+ * Ez a program szabad szoftver; terjeszthetı illetve mÛdosÌthatÛ a
+ * Free Software Foundation ·ltal kiadott GNU General Public License
+ * dokumentum·ban leÌrtak; ak·r a licenc 3-as, ak·r (tetszıleges) kÈsıbbi
+ * v·ltozata szerint.
  *
- * Ez a program abban a rem√©nyben ker√ºl k√∂zread√°sra, hogy hasznos lesz,
- * de minden egy√©b GARANCIA N√âLK√úL, az ELADHAT√ìS√ÅGRA vagy VALAMELY C√âLRA
- * VAL√ì ALKALMAZHAT√ìS√ÅGRA val√≥ sz√°rmaztatott garanci√°t is bele√©rtve.
- * Tov√°bbi r√©szleteket a GNU General Public License tartalmaz.
+ * Ez a program abban a remÈnyben ker¸l kˆzread·sra, hogy hasznos lesz,
+ * de minden egyÈb GARANCIA N…LK‹L, az ELADHAT”S¡GRA vagy VALAMELY C…LRA
+ * VAL” ALKALMAZHAT”S¡GRA valÛ sz·rmaztatott garanci·t is beleÈrtve.
+ * Tov·bbi rÈszleteket a GNU General Public License tartalmaz.
  *
- * A felhaszn√°l√≥nak a programmal egy√ºtt meg kell kapnia a GNU General
- * Public License egy p√©ld√°ny√°t; ha m√©gsem kapta meg, akkor
+ * A felhaszn·lÛnak a programmal egy¸tt meg kell kapnia a GNU General
+ * Public License egy pÈld·ny·t; ha mÈgsem kapta meg, akkor
  * tekintse meg a <http://www.gnu.org/licenses/> oldalon.
  *
  * Version history:
