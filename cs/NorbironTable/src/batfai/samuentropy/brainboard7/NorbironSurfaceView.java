@@ -424,7 +424,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 	{
                 		nodeBoxes.remove(nbi);
                 	}
-                	catch (java.util.ConcurrentModificationException)
+                	catch (java.util.ConcurrentModificationException e)
                 	{
                 		e.printStackTrace();
                 	}
