@@ -296,8 +296,13 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 }
             }
 
-            for (NeuronBox nb : nodeBoxes) {
-                nb.draw(-startsx, -startsy, canvas);
+            for (NeuronBox nb : nodeBoxes)
+            {
+            	try
+            	{
+            		nb.draw(-startsx, -startsy, canvas);
+            	}
+            	catch (java.util.ConcurrentModificationException e) {}
             }
 
             if (buildClick == 0)
@@ -390,6 +395,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
         	{
         		buildClick = 5;
         		newNode();
+        		return true;
         	}
 
             long pressTime = System.currentTimeMillis();
