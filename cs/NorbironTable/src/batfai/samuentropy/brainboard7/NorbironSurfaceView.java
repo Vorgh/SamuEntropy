@@ -419,6 +419,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 }
                 else
                 {
+                	doubleTap=false;
                     nodeBoxes.remove(nbi);
                     saveData(PreferenceManager.getDefaultSharedPreferences(context).edit());
                 }
@@ -450,7 +451,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 fromsy = y;
             }
 
-            repaint();
+            //repaint();
 
         } else if (event.getAction() == android.view.MotionEvent.ACTION_UP) {
 
