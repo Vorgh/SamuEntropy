@@ -420,7 +420,14 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 else
                 {
                 	doubleTap=false;
-                    nodeBoxes.remove(nbi);
+                	try
+                	{
+                		nodeBoxes.remove(nbi);
+                	}
+                	catch (java.util.ConcurrentModificationException)
+                	{
+                		e.printStackTrace();
+                	}
                     saveData(PreferenceManager.getDefaultSharedPreferences(context).edit());
                 }
             }
