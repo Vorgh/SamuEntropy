@@ -295,15 +295,14 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                     canvas.drawBitmap(nodes.getBoardPic(), -startsx + boardx + i * 300, -startsy + boardy + j * 300, null);
                 }
             }
-
-            for (NeuronBox nb : nodeBoxes)
-            {
-            	try
+            try
+        	{
+            	for (NeuronBox nb : nodeBoxes)
             	{
             		nb.draw(-startsx, -startsy, canvas);
             	}
-            	catch (java.util.ConcurrentModificationException e) {}
             }
+            catch (java.util.ConcurrentModificationException e) {}
 
             if (buildClick == 0)
             {
@@ -342,35 +341,42 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
         return (x1 - y1) * (x1 - y1) + (x2 - y2) * (x2 - y2);
     }
 
-    protected NeuronBox nearestNeuronBox(float x, float y) {
+    /*protected NeuronBox nearestNeuronBox(float x, float y) {
 
         NeuronBox r = null;
         float max = 10000, m;
+        
+        try
+        {
+        	for (NeuronBox nb : nodeBoxes) {
 
-        for (NeuronBox nb : nodeBoxes) {
-
-            if ((m = d(nb.getX() + nb.getWidth() / 2, nb.getY() + nb.getHeight() / 2, x, y)) < max) {
-                max = m;
-                r = nb;
-            }
-        }
+        		if ((m = d(nb.getX() + nb.getWidth() / 2, nb.getY() + nb.getHeight() / 2, x, y)) < max) {
+        			max = m;
+        			r = nb;
+        		}
+        	}
+        catch (java.util.ConcurrentModificationException e) {}
         return r;
-    }
+    }*/
 
     protected int nearestNeuronBoxIndex(float x, float y) {
 
         int r = -1;
         float max = 10000, m;
 
-        for (int i=0; i<nodeBoxes.size(); i++)
+        try
         {
-            NeuronBox nb = nodeBoxes.get(i);
-            if ((m = d(nb.getX() + nb.getWidth() / 2, nb.getY() + nb.getHeight() / 2, x, y)) < max)
-            {
-                max = m;
-                r = i;
-            }
+        	for (int i=0; i<nodeBoxes.size(); i++)
+        	{
+        		NeuronBox nb = nodeBoxes.get(i);
+        		if ((m = d(nb.getX() + nb.getWidth() / 2, nb.getY() + nb.getHeight() / 2, x, y)) < max)
+        		{
+        			max = m;
+        			r = i;
+        		}
+        	}
         }
+        catch (java.util.ConcurrentModificationException e) {}
         return r;
     }
 
@@ -430,10 +436,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 	{
                 		nodeBoxes.remove(nbi);
                 	}
-                	catch (java.util.ConcurrentModificationException e)
-                	{
-                		e.printStackTrace();
-                	}
+                	catch (java.util.ConcurrentModificationException e) {}
                     saveData(PreferenceManager.getDefaultSharedPreferences(context).edit());
                 }
             }
@@ -485,10 +488,14 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
         while (running) {
 
             if ((newnow = System.currentTimeMillis()) - now > 100) {
-
-                for (NeuronBox nb : nodeBoxes) {
-                    nb.step();
-                }
+            	
+            	try
+            	{
+            		for (NeuronBox nb : nodeBoxes) {
+            			nb.step();
+            		}
+            	}
+            	catch (java.util.ConcurrentModificationException e) {}
 
                 repaint();
 
