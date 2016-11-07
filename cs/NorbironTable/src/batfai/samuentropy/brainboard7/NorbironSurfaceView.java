@@ -261,8 +261,11 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
             nodeBoxes.add((NeuronBox) nodes.get(6).clone());
         }*/
 
-        nodeBoxes.clear();
-        loadData(PreferenceManager.getDefaultSharedPreferences(context));
+        if (!NeuronGameActivity.restore)
+        {
+            nodeBoxes.clear();
+            loadData(PreferenceManager.getDefaultSharedPreferences(context));
+        }
         android.content.Intent intent = ((NeuronGameActivity) context).getIntent();
         android.os.Bundle bundle = intent.getExtras();
         if (bundle != null)
@@ -271,7 +274,6 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
             android.util.Log.w("alma", "s" + i);
             nodeBoxes.add((NeuronBox) nodes.get(i).clone());
         }
-        saveData(PreferenceManager.getDefaultSharedPreferences(context).edit());
 
         surfaceHolder = getHolder();
         surfaceHolder.addCallback(new SurfaceEvents(this));
@@ -437,7 +439,6 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 		nodeBoxes.remove(nbi);
                 	}
                 	catch (java.util.ConcurrentModificationException e) {}
-                    saveData(PreferenceManager.getDefaultSharedPreferences(context).edit());
                 }
             }
             else
